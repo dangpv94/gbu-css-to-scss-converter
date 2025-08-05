@@ -1,0 +1,47 @@
+{
+  "name": "gbu-css-to-scss-converter",
+  "version": "1.0.0",
+  "description": "Convert CSS files to SCSS with proper nesting and beautiful formatting",
+  "main": "dist/index.js",
+  "bin": {
+    "css2scss": "dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dangpv94/gbu-css-to-scss-converter.git"
+  },
+  "homepage": "https://github.com/dangpv94/gbu-css-to-scss-converter#readme",
+  "bugs": {
+    "url": "https://github.com/dangpv94/gbu-css-to-scss-converter/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "start": "node dist/cli.js",
+    "demo": "npm run build && node dist/cli.js simple.css -o demo.scss"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "converter",
+    "nesting"
+  ],
+  "author": "dangpv94",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/css-tree": "^2.3.10",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "css-tree": "^2.3.1",
+    "postcss": "^8.4.0",
+    "postcss-scss": "^4.0.0"
+  }
+}

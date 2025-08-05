@@ -1,0 +1,67 @@
+export interface VariableEnhancedConversionOptions {
+    indentSize?: number;
+    indentType?: 'spaces' | 'tabs';
+    preserveComments?: boolean;
+    sortProperties?: boolean;
+    enableBEM?: boolean;
+    enableSmartNesting?: boolean;
+    maxNestingDepth?: number;
+    enableDuplicateDetection?: boolean;
+    enableAdvancedBEM?: boolean;
+    enableMediaQueryGrouping?: boolean;
+    enableVariableExtraction?: boolean;
+    variablePrefix?: string;
+    minOccurrences?: number;
+    extractColors?: boolean;
+    extractSizes?: boolean;
+    extractFonts?: boolean;
+    extractOthers?: boolean;
+}
+export declare class VariableEnhancedCSSToSCSSConverter {
+    private options;
+    private variableCandidates;
+    private extractedVariables;
+    constructor(options?: VariableEnhancedConversionOptions);
+    convert(cssContent: string): Promise<string>;
+    private analyzeVariableCandidates;
+    private categorizeValue;
+    private isColorProperty;
+    private isColorValue;
+    private isSizeProperty;
+    private isSizeValue;
+    private isFontProperty;
+    private shouldExtractCategory;
+    private generateVariableName;
+    private getSemanticColorName;
+    private extractVariables;
+    private replaceValuesWithVariables;
+    private formatVariables;
+    private extractRules;
+    private parseAdvancedBEM;
+    private generateRuleHash;
+    private detectAndMergeDuplicates;
+    private generateDeclarationHash;
+    private declarationsEqual;
+    private groupByMediaQuery;
+    private calculateSpecificity;
+    private buildAdvancedNestedStructure;
+    private buildAdvancedBEMStructure;
+    private buildAdvancedBEMBlock;
+    private addBEMBlockRule;
+    private addAdvancedBEMElement;
+    private addBEMModifier;
+    private addAdvancedBEMElementModifier;
+    private buildSmartNestedStructure;
+    private groupRulesByPattern;
+    private extractBasePattern;
+    private buildSmartNestedGroup;
+    private insertSmartNestedRule;
+    private parseComplexSelector;
+    private insertComplexNestedRule;
+    private buildBasicNestedStructure;
+    private indentContent;
+    private formatSCSS;
+    private formatKeyframeRule;
+    private getIndent;
+}
+//# sourceMappingURL=variable-enhanced-converter.d.ts.map

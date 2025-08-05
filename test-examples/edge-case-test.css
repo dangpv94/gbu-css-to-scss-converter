@@ -1,0 +1,39 @@
+/* Edge cases test */
+.test {
+  /* Duplicate properties */
+  color: red;
+  color: blue;
+  color: red;
+  
+  /* Complex values */
+  background: linear-gradient(45deg, #ff0000, #00ff00);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.2);
+  
+  /* Vendor prefixes */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Empty rule */
+.empty {
+}
+
+/* Rule with only comments */
+.comments-only {
+  /* Just a comment */
+}
+
+/* Malformed selector recovery test */
+.test, .test2 {
+  color: red;
+}
+
+/* Complex nesting candidate */
+.parent .child .grandchild {
+  color: blue;
+}
+
+.parent .child .other {
+  color: blue;
+}

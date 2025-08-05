@@ -1,0 +1,77 @@
+// Variables
+
+// Color variables
+$color-red: #ff0000;
+
+// Size variables
+$m-8px: 8px;
+$p-16px: 16px;
+
+@font-face {
+  font-family: "TestFont";
+  src: url(test.woff)format("woff");
+  font-weight: 400;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@-webkit-keyframes slideUp {
+  from {
+    bottom: -100px;
+  }
+
+  to {
+    bottom: 0;
+  }
+
+}
+
+.test-block {
+  color: $color-red;
+  background: #ffffff;
+  padding: $p-16px;
+  margin: $m-8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  &__element {
+    color: $color-red;
+    font-size: 14px;
+    padding: $m-8px;
+    margin: $m-8px;
+  }
+  &__element--modifier {
+    color: #ffffff;
+    background: $color-red;
+    padding: $p-16px;
+  }
+}
+
+.duplicate-test {
+  color: $color-red;
+  padding: $p-16px;
+}
+
+@media (max-width:768px) {
+  .test-block {
+    padding: $m-8px;
+    margin: 4px;
+
+    &__element {
+      font-size: 12px;
+    }
+  }
+
+}

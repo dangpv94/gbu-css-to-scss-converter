@@ -1,0 +1,70 @@
+/* Comprehensive test file */
+@font-face {
+  font-family: "TestFont";
+  src: url("test.woff") format("woff");
+  font-weight: 400;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+.test-block {
+  color: #ff0000;
+  background: #ffffff;
+  padding: 16px;
+  margin: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.test-block__element {
+  color: #ff0000;
+  font-size: 14px;
+  padding: 8px;
+  margin: 8px;
+}
+
+.test-block__element--modifier {
+  color: #ffffff;
+  background: #ff0000;
+  padding: 16px;
+}
+
+.duplicate-test {
+  color: #ff0000;
+  padding: 16px;
+}
+
+.another-duplicate {
+  color: #ff0000;
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .test-block {
+    padding: 8px;
+    margin: 4px;
+  }
+  
+  .test-block__element {
+    font-size: 12px;
+  }
+}
